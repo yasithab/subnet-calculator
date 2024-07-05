@@ -1,4 +1,4 @@
-# Visual Subnet Calculator - [visualsubnetcalc.com](https://visualsubnetcalc.com)
+# Visual Subnet Calculator - [subnet.yasitha.dev](https://subnet.yasitha.dev)
 
 ![demo.gif](src%2Fdemo.gif)
 
@@ -32,11 +32,11 @@ Compile from source:
 
 ```shell
 # Clone the repository
-> git clone https://github.com/ckabalan/visualsubnetcalc
+> git clone https://github.com/yasithab/subnet-calculator
 # Use recommended NVM version
 > nvm use
 # Change to the sources directory
-> cd visualsubnetcalc/src
+> cd subnet-calculator
 # Install Bootstrap
 > npm install
 # Compile Bootstrap (Also install sass command line globally)
@@ -47,7 +47,7 @@ Compile from source:
 
 
 
-The full application should then be available within `./dist/`, open `./dist/index.html` in a browser.
+The full application should then be available within `dist`, open `dist/index.html` in a browser.
 
 ### Run with certificates (Optional)
 
@@ -60,7 +60,7 @@ The full application should then be available within `./dist/`, open `./dist/ind
 # generate CA Certs to be trusted by local browsers
 > mkcert install
 # generate certs for local development
-> cd visualsubnetcalc/src
+> cd subnet-calculator
 # generate certs for local development
 > npm run setup:certs
 # run the local webserver with https
