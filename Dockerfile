@@ -3,7 +3,7 @@
 ARG ARCH=amd64
 
 # Stage 1: Build the React application
-FROM --platform=linux/${ARCH} node:20-alpine as builder
+FROM --platform=linux/${ARCH} node:20-alpine as build
 
 # Set arguments for build
 ARG REACT_APP_SERVICES_HOST=/services/m
