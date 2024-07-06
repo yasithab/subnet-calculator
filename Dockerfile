@@ -3,7 +3,7 @@
 ARG ARCH=amd64
 
 # Stage 1: Build the React application
-FROM --platform=linux/${ARCH} node:20-alpine as build
+FROM --platform=linux/${ARCH} node:20-alpine as builder
 
 # Set arguments for build
 ARG REACT_APP_SERVICES_HOST=/services/m
@@ -20,6 +20,8 @@ RUN npm install \
 
 # Stage 2: Create a minimal production image using Nginx
 FROM --platform=linux/${ARCH} nginxinc/nginx-unprivileged:stable-alpine
+
+LABEL maintainer="Yasitha Bogamuwa <yasithab@gmail.com>"
 
 # Copy built assets from the build stage
 COPY --from=build /app/build/dist /usr/share/nginx/html
