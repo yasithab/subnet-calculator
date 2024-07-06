@@ -45,8 +45,6 @@ Compile from source:
 > npm start
 ```
 
-
-
 The full application should then be available within `dist`, open `dist/index.html` in a browser.
 
 ### Run with certificates (Optional)
@@ -66,6 +64,12 @@ The full application should then be available within `dist`, open `dist/index.ht
 # run the local webserver with https
 > npm run local-secure-start
 ````
+
+## Run it in a docker container
+
+```shell
+docker run -p 8080:8080 yasithab/subnet-calculator:latest
+```
 
 # Cloud Subnet Notes
 
